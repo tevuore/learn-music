@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="js/vendor/jquery-ui-1.12.1/jquery-ui.css">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <h3>Learn Music</h3>
+
+        <div data-video=""
+            data-autoplay="1"
+            data-loop="1"
+            id="youtube-audio">
+        </div>
+
+        <p><span id="time"></span> seconds</p>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <!--<script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>-->
+
+        <button id="show-answer-button" class="ui-button ui-widget ui-corner-all">Näytä vastaus</button>
+        <button id="next-button" class="ui-button ui-widget ui-corner-all">Seuraava kappale</button>
+
+        <table>
+            <tr class="answer"><td>Näyte</td><td id="sample-index-text"></td></tr>
+            <tr><td>Mikä tyylikausi?</td><td id="music-style-text" class="answer"></td></tr>
+            <tr><td>Mikä teostyyppi?</td><td id="music-type-text" class="answer"></td></tr>
+            <tr><td>Mikä soitinkokoonpano?</td><td id="music-instruments-text" class="answer"></td></tr>
+            <tr><td>Mikä säveltäjä & sävellys?</td><td id="music-composer-text" class="answer"></td></tr>
+        </table>
+
+        <script src="js/data.js"></script>
+        <script src="js/yt.js"></script>
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="js/vendor/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+        <script src="js/plugins.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <script>
+            $( function() {
+                initializeApp();
+            } );
+
+            console.log("loaded");
+        </script>
+    </body>
+</html>
